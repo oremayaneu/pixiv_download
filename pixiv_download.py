@@ -8,14 +8,15 @@ from tqdm import tqdm
 import shutil
 import datetime
 
-USER_ID = your_ID
+USER_ID = 12345 #あなたのIDへ書き換え
+
 # 保存先フォルダの作成
 if not os.path.exists("./pixiv_images"):
     os.mkdir("./pixiv_images")
 
 # login
 api = AppPixivAPI()
-api.auth(refresh_token='your_token')
+api.auth(refresh_token='あなたのtokenへ書き換え')
 
 # ブックマークした画像のjsonを取得
 users_data = api.user_bookmarks_illust(USER_ID, restrict='public')
